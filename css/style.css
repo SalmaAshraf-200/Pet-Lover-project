@@ -1,0 +1,1360 @@
+:root{
+    --orangeColor:#FF6200;
+    --greenColor:#56bc56;
+    --grayColor:#F0F0F0;
+    --mainFont:"DM Serif Text", serif;
+    --secondaryFont:"Libre Baskerville", serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.cursor{
+    width: 40px;
+    height: 40px;
+    background-color: var(--orangeColor);
+    border-radius: 10px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    top: 650px;
+    right: 20px;
+    margin-right: 20px;
+}
+
+.cursor a{
+    color: white;
+    font-size: 20px;
+}
+
+.greenHeader{
+    width: 100%;
+    height: 6vh;
+    background-color: var(--greenColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: var(--mainFont);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.greenHeader .right{
+    width: 25%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.greenHeader .right .line,
+.whiteHeader .left .line{
+    width: 2px;
+    height: 20px;
+    background-color: white;
+}
+
+.greenHeader .left{
+    width: 25%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.greenHeader .left a i{
+    color: white;
+}
+
+.greenHeader .right a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.whiteHeader{
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.whiteHeader .right{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-family: var(--secondaryFont);
+    align-items: center;
+}
+
+.whiteHeader .right .Pet,
+.footer .info .Pet{
+    color: var(--orangeColor);
+}
+
+.whiteHeader .left{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.whiteHeader .left .line{
+    background-color: #ccc;
+    height: 30px;
+}
+
+.whiteHeader .left div h3{
+    font-size: 15px;
+    font-family: var(--mainFont);
+}
+
+.whiteHeader .left div h4{
+    font-size: 10px;
+    color: #403f3f;
+    font-family: var(--secondaryFont);
+}
+
+.navbar{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #403f3f;
+}
+
+.navbar .left ul{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 9vh;
+}
+
+.navbar .left ul li{
+    list-style-type: none;
+}
+
+.navbar .left ul li a{
+    background-color: #403f3f;
+    height: 10vh;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 5px;
+    text-decoration: none;
+    font-family: var(--mainFont);
+    position: relative;
+}
+
+.navbar .left ul li .active,
+.navbar .left ul li a:hover{
+    background-color: var(--orangeColor);
+}
+
+.navbar .left ul li .pageContent{
+    display: none;
+    position: absolute;
+    left: 530px;
+}
+
+.navbar .left ul li .pageContent ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+} 
+
+.navbar .left ul li .pageContent ul li a{
+    width: 150px;
+    height: 50px;
+    color: #403f3f;
+    background-color: white;
+    font-size: 17px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px;
+}
+
+.navbar .left ul li .pageContent ul li a:hover{
+    color: black;
+    font-weight: bold;
+}
+
+.navbar .left ul li .pageContent ul li{
+    border-bottom: 2px solid #1d1d1d;
+}
+
+.navbar .left ul li .pageContent ul li:last-child{
+    border-bottom: none;
+}
+
+.navbar .left ul li:hover .pageContent{
+    display: block;
+}
+
+.navbar .right{
+    width: 10%;
+}
+
+.navbar .right button{
+    background-color: var(--orangeColor);
+    width: 110px;
+    height: 40px;
+    font-family: var(--mainFont);
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.banner{
+    width: 100%;
+    height: 90vh;
+    background-image: url(../images/carousel-1.jpg);
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 300px;
+    color: white;
+    font-family: var(--mainFont);
+}
+
+.banner i{
+    background-color: var(--orangeColor);
+    width: 35px;
+    height: 30px;
+    font-size: 25px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .bannerData{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.banner .bannerData h3{
+    font-size: 30px;
+}
+
+.banner .bannerData h2{
+    font-size: 50px;
+    text-transform: capitalize;
+}
+
+.banner .bannerData h5{
+    font-size: 20px;
+    font-family: var(--secondaryFont);
+}
+
+.banner .bannerData .buttons button{
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    font-family: var(--secondaryFont);
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.banner .bannerData .buttons .button1{
+    background-color: #ff6200c4;
+    color: white;
+}
+
+.banner .bannerData .buttons .button2{
+    background-color: #82d682d0;
+    color: black;
+}
+
+.banner .bannerData .buttons .button1:hover{
+    background-color: #FF6200;
+}
+
+.banner .bannerData .buttons .button2:hover{
+    background-color: #82d682;
+    color: white;
+}
+
+.bookingSection{
+    width: 100%;
+    height: 80vh;
+    background-color: var(--grayColor);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bookingSection .left{
+    width: 35%;
+    background-color: var(--orangeColor);
+    display: flex;
+    flex-direction: column;
+}
+
+.bookingSection .left form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+
+.bookingSection .left form input,
+.bookingSection .left form select{
+    width: 85%;
+    height: 50px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: var(--mainFont);
+}
+
+.bookingSection .left form input[type="submit"]{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.bookingSection .right .book{
+    display: flex;
+    font-size: 35px;
+    text-transform: capitalize;
+}
+
+.bookingSection .right .book .pet{
+    color: var(--orangeColor);
+}
+
+.bookingSection .right{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 80px;
+    font-family: var(--mainFont);
+}
+
+.bookingSection .right h3{
+    font-size: 30px;
+    color: var(--greenColor);
+}
+
+.bookingSection .right h5{
+    font-size: 15px;
+    font-family: var(--secondaryFont);
+    color: #534e4e;
+}
+
+.bookingSection .right .rightBottom{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+}
+
+.bookingSection .right .rightBottom .service h3{
+    color: black;
+    display: flex;
+    gap: 10px;
+    font-size: 25px;
+    align-items: center;
+}
+
+.bookingSection .right .rightBottom .service i{
+    color: var(--greenColor);
+}
+
+.bookingSection .right .rightBottom .service p{
+    font-size: 14px;
+    color: #403f3f;
+    font-family: var(--secondaryFont);
+}
+
+.aboutUs{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.aboutUs .aboutUsLeft{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.aboutUs .aboutUsLeft h3{
+    font-size: 30px;
+    color: var(--greenColor);
+}
+
+.aboutUs .aboutUsLeft .boarding,
+.pricingSection .colored,
+.teamMembersSection .colored,
+.testimonialSection .colored{
+    display: flex;
+}
+
+.aboutUs .aboutUsLeft h2{
+    font-size: 50px;
+}
+
+.aboutUs .aboutUsLeft .daycare,
+.pricingSection .colored .price,
+.teamMembersSection .colored .team,
+.testimonialSection .colored .says{
+    color: var(--orangeColor);
+}
+
+.aboutUs .aboutUsLeft h4{
+    font-size: 20px;
+    color: #403f3f;
+}
+
+.aboutUs .aboutUsLeft h5{
+    font-size: 15px;
+    color: #534e4e;
+}
+
+.aboutUs .aboutUsLeft ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.aboutUs .aboutUsLeft ul li{
+    list-style: none;
+    font-family: var(--secondaryFont);
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+}
+
+.aboutUs .aboutUsLeft ul li i{
+    color: var(--greenColor);
+}
+
+.aboutUs .aboutUsLeft button{
+    background-color: var(--orangeColor);
+    width: 150px;
+    height:40px;
+    border: none;
+    color: white;
+    font-family: var(--secondaryFont);
+    font-weight: bold;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.aboutUs .aboutUsRight{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(2,1Fr);
+    grid-template-rows: repeat(2,1Fr);
+}
+
+.aboutUs .aboutUsRight .container .img{
+    background-size: 100% 100%;
+}
+
+.aboutUs .aboutUsRight .container .img1{
+    background-image: url(../images/about-1.jpg);
+    grid-area:1/1/1/3;
+    
+}
+
+.aboutUs .aboutUsRight .container .img2{
+    background-image: url(../images/about-2.jpg);
+    grid-area:2/1/3/2;
+}
+
+.aboutUs .aboutUsRight .container .img3{
+    background-image: url(../images/about-3.jpg);
+    grid-area:2/2/3/3;
+    
+}
+
+.serviceSection{
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--grayColor);
+}
+
+.serviceSection .serviceSectionTop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.serviceSection .serviceSectionTop h3,
+.pricingSection h3,
+.teamMembersSection h3,
+.testimonialSection h3,
+.BlogSection .BlogSectionTop h3{
+    color: var(--greenColor);
+    font-size: 30px;
+}
+
+.serviceSection .serviceSectionTop .colored,
+.benefitsSection .benefitsSectionRight .colored,
+.BlogSection .BlogSectionTop .colored{
+    display: flex;
+    color: var(--orangeColor);
+    gap: 5px;
+    font-size: 40px;
+}
+
+.serviceSection .serviceSectionTop .colored .pet,
+.benefitsSection .benefitsSectionRight .colored .pet,
+.BlogSection .BlogSectionTop .colored .blog{
+    color: black;
+}
+
+.serviceSectionBottom{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.serviceSectionBottom .card{
+    width: 450px;
+    height: 300px;
+    padding: 20px;
+    border: 1px solid #ccc ;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    box-shadow: 5px 5px 10px var(--greenColor);
+}
+
+.serviceSectionBottom .card i{
+    color: var(--greenColor);
+    font-size: 40px;
+}
+
+.serviceSectionBottom .card h3{
+    font-size: 30px;
+    font-family: var(--mainFont);
+}
+
+.serviceSectionBottom .card h4{
+    width: 80%;
+    color: #403f3f;
+    font-family: var(--mainFont);
+}
+
+.serviceSectionBottom .card h5 a{
+    color: var(--orangeColor);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.benefitsSection{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+.benefitsSection .benefitsSectionLeft{
+    width: 25%;
+    background-image: url(../images/feature.jpg);
+    background-size: 100% 100%;
+}
+
+.benefitsSection .benefitsSectionRight{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.benefitsSection .benefitsSectionRight h3{
+    color: var(--greenColor);
+    font-size: 25px;
+    font-family: var(--mainFont);
+}
+
+.benefitsSection .benefitsSectionRight h2{
+    font-size: 50px;
+    font-family: var(--mainFont);
+}
+
+.benefitsSection .benefitsSectionRight h4{
+    color: #403f3f;
+}
+
+
+.benefitsSection .benefitsSectionRight .bottom{
+    display: flex;
+    gap: 100px;
+    font-size: 22px;
+}
+
+.benefitsSection .benefitsSectionRight .bottom .left ,
+.benefitsSection .benefitsSectionRight .bottom .right {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.benefitsSection .benefitsSectionRight .bottom .left h4,
+.benefitsSection .benefitsSectionRight .bottom .right h4{
+    color: black;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.benefitsSection .benefitsSectionRight .bottom .left h4 i,
+.benefitsSection .benefitsSectionRight .bottom .right h4 i{
+    color: var(--greenColor);
+}
+
+.pricingSection{
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    background-color: var(--grayColor);
+}
+
+.pricingSection .colored{
+    font-size: 30px;
+}
+
+.pricingSection .pricingSectionBottom{
+    display: flex;
+    gap: 20px;
+}
+
+.pricingSection .pricingSectionBottom .card{
+    width: 400px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+}
+
+.pricingSection .pricingSectionBottom .card .img{
+    height: 250px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.288)), url(../images/price-1.jpg);
+    background-size: 100% 100%;
+    display: flex;   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricingSection .pricingSectionBottom .card .img h4{
+    color: var(--orangeColor);
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: var(--mainFont);
+}
+
+.pricingSection .pricingSectionBottom .card .img .green{
+    color: var(--greenColor);
+}
+
+.pricingSection .pricingSectionBottom .card .img h3{
+    color: white;
+    font-family: var(--secondaryFont);
+    font-size: 60px;
+}
+
+.pricingSection .pricingSectionBottom .card .img h3 sup{
+    font-size: 20px;
+}
+
+.pricingSection .pricingSectionBottom .card .img2{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.288)), url(../images/price-2.jpg);    
+}
+
+.pricingSection .pricingSectionBottom .card .img3{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.288)),url(../images/price-3.jpg);
+}
+
+.pricingSection .pricingSectionBottom .card h4{
+    color: #403f3f;
+    font-family: var(--secondaryFont);
+    font-size: 17px;
+    align-self: center;
+}
+
+.pricingSection .pricingSectionBottom .card .line{
+    width: 400px;
+    height: 1px;
+    background-color: #403f3f;
+}
+
+.pricingSection .pricingSectionBottom .card .signUp{
+    height: 50px;
+    width: 400px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff6200b5;
+}
+
+.pricingSection .pricingSectionBottom .card .signUp h4 a{
+    font-family: var(--mainFont);
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.pricingSection .pricingSectionBottom .card .signUp:hover{
+    background-color: var(--orangeColor);
+}
+
+.pricingSection .pricingSectionBottom .card .colored h4 a{
+    width: 400px;
+    height: 50px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #44a744ea;
+    color: black;
+    text-decoration: none;
+}
+
+.pricingSection .pricingSectionBottom .card .colored h4 a:hover{
+    background-color: var(--greenColor);
+}
+
+.pricingSection .pricingSectionBottom .card h4 i{
+    color: var(--greenColor);
+    margin-right: 10px;
+}
+
+.pricingSection .pricingSectionBottom .card h4 .fa-xmark{
+    color: red;
+}
+
+.teamMembersSection{
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.teamMembersSection h3,
+.testimonialSection h3{
+    font-size: 30px;
+    font-family: var(--mainFont);
+}
+
+.teamMembersSection .colored,
+.testimonialSection .colored{
+    font-size: 35px;
+    font-family: var(--mainFont);
+    gap: 10px;
+}
+
+.teamMembersSection .teamMembersSectionBottom{
+    display: flex;
+    gap: 20px;   
+}
+
+.teamMembersSection .teamMembersSectionBottom .card{
+    width: 280px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--grayColor);
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+.teamMembersSection .teamMembersSectionBottom .card .img{
+    height: 300px;
+    background-image: url(../images/team-1.jpg);
+    background-size: 100% 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.teamMembersSection .teamMembersSectionBottom .card .img2{
+    background-image: url(../images/team-2.jpg);
+    background-size: 100% 100%;
+}
+
+.teamMembersSection .teamMembersSectionBottom .card .img3{
+    background-image: url(../images/team-3.jpg);
+    background-size: 100% 100%;
+}
+
+.teamMembersSection .teamMembersSectionBottom .card .img4{
+    background-image: url(../images/team-4.jpg);
+    background-size: 100% 100%;
+}
+
+.teamMembersSection .teamMembersSectionBottom .card .cardBottom{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.teamMembersSection .teamMembersSectionBottom .card h4{
+    font-size: 20px;
+    font-family: var(--mainFont);
+}
+
+.teamMembersSection .teamMembersSectionBottom .card h5{
+    font-family: var(--secondaryFont);
+    color: #534e4e;
+}
+
+.teamMembersSection .teamMembersSectionBottom .card .cardBottom .socials{
+    position: absolute;
+    top: 0px;
+    background-color: black;
+    width: 280px;
+    height: 110px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 10px 10px;
+    transform: rotateX(90deg);
+}
+
+.teamMembersSection .teamMembersSectionBottom .card .cardBottom:hover .socials{
+    transform: rotateX(0deg);
+    transition: 0.4s;
+}
+
+.teamMembersSection .teamMembersSectionBottom .card .cardBottom .socials a .socials-container{
+    color: var(--orangeColor);
+    background-color: black;
+    border: 0.5px solid var(--orangeColor);
+}
+
+.teamMembersSection .teamMembersSectionBottom .card .cardBottom .socials .socials-container:hover{
+    color: white;
+    background-color: var(--orangeColor);
+}
+
+.testimonialSection{
+    width: 100%;
+    height: 70vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+    background-color: var(--grayColor);
+}
+
+.testimonialSection .testimonialSectionBottom{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonialSection .testimonialSectionBottom .card{
+    width: 300px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-shadow: 2px 2px 10px 2px var(--greenColor);
+}
+
+.testimonialSection .testimonialSectionBottom .card .cardTop{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.testimonialSection .testimonialSectionBottom .card .cardTop .right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    font-family: var(--mainFont);
+    font-size: 17px;
+}
+
+.testimonialSection .testimonialSectionBottom .card .cardTop .right h5{
+    font-size: 14px;
+    color: #534e4e;
+}
+
+.testimonialSection .testimonialSectionBottom .card .cardTop .img{
+    background-image: url(../images/testimonial-1.jpg);
+    background-size: 100% 100%;
+    width: 30%;
+    height: 100px;
+}
+
+.testimonialSection .testimonialSectionBottom .card .cardTop .img2{
+    background-image: url(../images/testimonial-2.jpg);
+}
+
+.testimonialSection .testimonialSectionBottom .card .cardTop .img3{
+    background-image: url(../images/testimonial-3.jpg);
+}
+
+.testimonialSection .testimonialSectionBottom .card .cardTop .img4{
+    background-image: url(../images/testimonial-4.jpg);
+}
+
+.testimonialSection .testimonialSectionBottom .card p{
+    text-align: center;
+    color: #534e4e;
+    font-family: var(--mainFont);
+    font-size: 15px;
+}
+
+.testimonialSection .animation{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.testimonialSection .animation .circle{
+    width: 20px;
+    height: 20px;
+    background-color: var(--greenColor);
+    border: 2px solid var(--greenColor);
+    border-radius: 50%;
+    animation-name: moveUpDown;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+.testimonialSection .animation .circle:nth-child(2){
+    animation-delay: 0.25s;
+}
+
+.testimonialSection .animation .circle:nth-child(3){
+    animation-delay: 0.5s;
+}
+
+.testimonialSection .animation .circle:last-child{
+    animation-delay: 0.6s;
+}
+
+@keyframes moveUpDown{
+    0%{
+        transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(20px);
+    }
+}
+
+.BlogSection{
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.BlogSection .BlogSectionTop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--secondaryFont);
+}
+
+.BlogSection .BlogSectionBottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.BlogSection .BlogSectionBottom .card{
+    width: 350px;
+    height: 550px;
+    box-shadow: 2px 2px 10px 2px var(--greenColor);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.BlogSection .BlogSectionBottom .card .img{
+    background-image: url(../images/blog-1.jpg);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 350px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.BlogSection .BlogSectionBottom .card .img2{
+    background-image: url(../images/blog-2.jpg);
+}
+
+.BlogSection .BlogSectionBottom .card .img3{
+    background-image: url(../images/blog-3.jpg);
+}
+
+.BlogSection .BlogSectionBottom .card .cardBottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.BlogSection .BlogSectionBottom .card .cardBottom h3{
+    font-size: 25px;
+    font-family: var(--mainFont);
+}
+
+.BlogSection .BlogSectionBottom .card .cardBottom .info{
+    display: flex;
+    gap: 15px;
+}
+
+.BlogSection .BlogSectionBottom .card .cardBottom .info h4{
+    display: flex;
+    gap: 5px;
+    color: #534e4e;
+}
+
+.BlogSection .BlogSectionBottom .card .cardBottom p{
+    text-align: center;
+    color: #534e4e;
+    font-size: 15px;
+    font-family: var(--mainFont);
+}
+
+.BlogSection .BlogSectionBottom .card .cardBottom a{
+    color: var(--orangeColor);
+    text-decoration: none;
+    font-family: var(--secondaryFont);
+    font-size: 17px;
+}
+
+.footer{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    padding: 40px;
+    justify-content: space-evenly;
+    gap: 60px;
+    background-color: #1d1d1d;
+    margin-top: 40px;
+}
+
+.footer .info{
+    width: 35%;
+    margin-top: 20px;
+}
+
+.footer .info .infoTop{
+    display: flex;
+    gap: 5px;
+    font-size: 25px;
+    color: white;
+    font-family: var(--mainFont);
+}
+
+.footer .info p{
+    color: white;
+    /* font-family: var(--secondaryFont); */
+    font-size: 17px;
+    word-spacing: 3px;
+}
+
+.footer .location{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.footer .location h2,
+.footer .links h2,
+.footer .newsLetter h2{
+    color: var(--orangeColor);
+    font-family: var(--secondaryFont);
+    font-size: 25px;
+}
+
+.footer .location h3{
+    color: white;
+    font-size: 17px;
+    display: flex;
+    gap: 5px;
+}
+
+.footer .location .socials,
+.teamMembersSection .teamMembersSectionBottom .card .cardBottom .socials{
+    display: flex;
+    gap: 20px;
+}
+
+.footer .location .socials a,
+.teamMembersSection .teamMembersSectionBottom .card .cardBottom .socials a{
+    text-decoration: none;
+}
+
+.footer .location .socials .socials-container,
+.teamMembersSection .teamMembersSectionBottom .card .cardBottom .socials .socials-container{
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.footer .location .socials .socials-container:hover{
+    background-color: white;
+    color: #1d1d1d;
+}
+
+.footer .links{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.footer .links h4 a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    gap: 10px;
+}
+
+.footer .links h3:hover{
+    text-decoration-line: underline;
+}
+
+.footer .newsLetter{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.footer .newsLetter form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer .newsLetter form input{
+    width: 250px;
+    height: 30px;
+    padding-left: 10px;
+    font-size: 17px;
+    font-family: var(--mainFont);
+    color: #403f3f;
+}
+
+.footer .newsLetter form input[type="submit"]{
+    background-color: var(--orangeColor);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: var(--mainFont);
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    display: flex;
+    text-align: center;
+    padding: 0px;
+}
+
+.rights{
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 70px 0px  50px;
+}
+
+.rights .rightsLeft,
+.rights .rightsLeft h4 a{
+    display: flex;
+    font-size: 17px;
+    text-transform: capitalize;
+    display: flex;
+    color: white;
+    gap: 5px;
+    text-decoration: none;
+}
+
+.rights .rightsLeft h4 a:hover{
+    text-decoration-line: underline;
+}
+
+.rights .rightsRight{
+    display: flex;
+    gap: 20px;
+}
+
+.rights .rightsRight h4 a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    font-size: 15px;
+    font-family: var(--mainFont);
+}
+
+@media screen and (max-width:1406px){
+    .cursor{
+        margin-right: 70px;
+    }
+    .banner i{
+        margin: 20px;
+        width: 40px;
+    }
+
+}
+
+@media screen and (max-width:1300px){
+    .cursor{
+        margin-right: 100px;
+    }
+    .banner .bannerData h3{
+        font-size: 25px;
+    }
+    .banner .bannerData h2{
+        font-size: 40px;
+    }
+    .banner .bannerData h5{
+    font-size: 20px;
+    }
+}
+
+@media screen and (max-width:1200px){
+    .cursor{
+        margin-right: 150px;
+    }
+}
+
+@media screen and (max-width:1150px){
+    .navbar .right{
+        width: 15%;
+    }
+    .banner .bannerData h3{
+        font-size: 20px;
+    }
+    .banner .bannerData h2{
+        font-size: 35px;
+    }
+    .banner .bannerData h5{
+    font-size: 17px;
+    }
+    .banner .bannerData .buttons button{
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:1030px){
+    .banner .bannerData h3{
+        font-size: 17px;
+    }
+    .banner .bannerData h2{
+        font-size: 50px;
+    }
+    .banner .bannerData h5{
+    font-size: 15px;
+    }
+    .banner .bannerData{
+        width: 100%;
+    }
+    .banner i{
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+@media screen and (max-width:1020px){
+    .bookingSection .right h2{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width:850px){
+    
+}
+
